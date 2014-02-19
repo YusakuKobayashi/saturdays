@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='assets/css/app.css'>
+  
+  <title>Saturdays</title>
+  
+</head>
+
+<body>
+  
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1380496228847098";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="masthead" data-background="assets/img/wallpaper.png" class="masthead trainer">
+    <h1>Saturdays</h1>
+    <a href="#" class="btn btn-primary">法人様</a>
+  </div>
+
+  <section id="trainer-profile" class="trainer-info">
+    <div class="container">
+      <h1>前田紅華</h1>
+      <div class="row">
+        <div id="trainer-image" class="col-md-4">
+          <img class="img-responsive img-rounded" src="assets/img/trainers-main/maeda_k.jpg" alt="前田紅華">
+        </div>
+        <div class="col-md-8">
+          <p>1980年生まれ大阪府出身, 書道家</p>
+          <ul>
+            <li>2003年&nbsp;第37回高野山競書大会南山賞</li>
+            <li>2004年&nbsp;第38回高野山競書大会南山賞</li>
+            <li>2005年&nbsp;毎日書道展入選</li>
+            <li>2006年&nbsp;教師合格 紅華村塾を開塾<br>毎日書道展入選<br>表参道ヒルズギャラリー80にて盛況の内に初個展開催</li>
+            <li>2007年&nbsp;東京－甲会会長就任<br>毎日書道展入選<br>表参道ヒルズギャラリー80にて第2回個展開催<br>中目黒ギャラリーequriqriにて第3回個展開催</li>
+            <li>2008年&nbsp;太源書道会評議委員就任<br>毎日書道展入選<br>表参道ヒルズギャラリー80にて第4回、第5回個展開催<br>中目黒さくらギャラリーにて第6回個展開催<br>中目黒キャスパーズギャラリーにて第7回個展開催</li>
+            <li>2009年&nbsp;毎日書道展入選<br>表参道ヒルズギャラリー80にて紅華村塾門下生発表会開催</li>
+            <li>2010年&nbsp;毎日書道展入選<br>表参道ヒルズギャラリー80にて前田紅華コレクション2010開催<br>久米繊維工業（株）"書道家10人のTシャツ展"にて前田紅華モデルをデザイン</li>
+            <li>2011年&nbsp;グンゼ（株）とコラボレーション グンゼ（株）の主力商品であるBODY WILDコラボ商品をデザイン<br>（株）エンターテイメントボウル コスメティックアイラインとコラボレーションアイラインボトルをデザイン<br>毎日書道展入選<br>表参道ヒルズギャラリー80にて前田紅華コレクション2011開催</li>
+
+          </ul>
+          手ぶらで気楽に楽しめるパーソナルレッスンでリラックスしながら集中力が身につき姿勢も綺麗にいつの間にか美文字になります。必ず上達する自信あります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="trainer-info" class="trainer-info">
+    <div class="container">
+      <div class="row">
+        <div class="trainer-meta col-md-4 col-md-push-8">
+          <h3>受講料</h3>
+          <p>&yen;10,000<br>
+          <small class="text-muted">60分&nbsp;10000円～</small></p>
+          <hr>
+          <h3>受講内容</h3>
+          <p>楷書&nbsp;行書&nbsp;仮名&nbsp;細字&nbsp;ペン字&nbsp;創作書<br>
+          <small class="text-muted">都内でしたらご自宅、オフィス等の出張を承ってます。赤坂にてグループレッスン受付中。ご要望があればご相談下さい。</small></p>
+        </div>
+        <hr class="visible-xs">
+        <div id="steps" class="col-md-8 col-md-pull-4">
+          <h3>体験レッスン受講まで、簡単3ステップ！</h3>
+          <p>通常と同じ内容の60分の体験授業をレッスン料無料でご用意しています。(貸し音楽スタジオの使用料(1,000円〜2,500円)を別途ご負担ください。)</p>
+          <div class="row">
+            <div class="col-sm-4">
+              <h4>Step 1</h4>
+              <img src="assets/img/step1.jpg" class="img-responsive img-rounded">
+              <p>3分でカンタンお申し込み</p>
+            </div>
+            <div class="col-sm-4">
+              <h4>Step 2</h4>
+              <img src="assets/img/step2.jpg" class="img-responsive img-rounded">
+              <p>レッスンを受ける</p>
+            </div>
+            <div class="col-sm-4">
+              <h4>Step 3</h4>
+              <img src="assets/img/step3.jpg" class="img-responsive img-rounded">
+              <p>その場でお支払い</p>
+            </div>
+            <div class="col-sm-12 text-center">
+              <p><a href="#" class="btn btn-primary btn-lg">無料体験</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <footer>
+    <div class="container">
+      &copy; 2013 Saturdays Inc. All rights reserved.
+    </div>
+  </footer>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/2.1.0/jquery.imagesloaded.min.js"></script>
+  <script src='assets/js/bootstrap.js'></script>
+<script src='assets/js/jquery.backstretch.min.js'></script>
+<script src='assets/js/jquery-imagefill.js'></script>
+<script src='assets/js/jquery.collagePlus.js'></script>
+<script src='assets/js/app.js'></script>
+
+</body>
+
+</html>

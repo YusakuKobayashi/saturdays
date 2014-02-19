@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='assets/css/app.css'>
+  
+  <title>Saturdays</title>
+  
+</head>
+
+<body>
+  
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1380496228847098";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="masthead" data-background="assets/img/wallpaper.png" class="masthead trainer">
+    <h1>Saturdays</h1>
+    <a href="#" class="btn btn-primary">法人様</a>
+  </div>
+
+  <section id="trainer-profile" class="trainer-info">
+    <div class="container">
+      <h1>清水麻貴</h1>
+      <div class="row">
+        <div id="trainer-image" class="col-md-4">
+          <img class="img-responsive img-rounded" src="assets/img/trainers-main/shimizu_m.jpg" alt="清水麻貴">
+        </div>
+        <div class="col-md-8">
+          <p>1988年生まれ埼玉県出身<br>指導プログラム「Balletone(バレトン)」</p>
+          <p>東邦音楽大学附属東邦第二高等学校にて３年間声楽を中心に音楽を学び、高校在学中に池袋ミュージカル学院を卒業。
+高校卒業後は東京療術学院にて整体・リフレクソロジー・アロマテラピーなどを習得する。
+３歳よりクラシックバレエ、７歳よりタップダンス・ジャズダンス、13歳より日本舞踊(花柳流)を学ぶ。
+19歳よりパフォーマンスチームBEAT座CLUBにて和太鼓を学ぶ。
+小学生の頃からミュージカル・イベントなどに出演。東京ディズニーリゾートダンサーを経て、現在はダンススタジオやスポーツジムにてインストラクターとして活動する傍ら和太鼓チーム“太鼓部”メンバーとしても活動している。</p>
+          <ul>出演作・活動歴
+            <li>1999年&nbsp;ミュージカル&quot;オズの魔法使い&quot;</li>
+            <li>2001年&nbsp;うつくしま未来博ミュージカル&quot;山に抱かれて&quot;</li>
+            <li>2002年&nbsp;ミュージカル&quot;アニー&quot;タップキッズ役</li>
+            <li>2006年&nbsp;ミュージカル&quot;HONK!&quot;アンサンブル役</li>
+            <li>2007年&nbsp;ミュージカル&quot;LOVE&quot;</li>
+            <li>2007年&nbsp;ミュージカル&quot;Gang&quot;</li>
+            <li>2008年&nbsp;CALVIP&nbsp;1st&nbsp;Action&nbsp;振付・ダンサー</li>
+            <li>2008年&nbsp;川崎タップフェスティバル&nbsp;BEAT座CLUB</li>
+            <li>2009年・2010年&nbsp;BEAT座CLUB&nbsp;Live</li>
+            <li>2011年&nbsp;映画&quot;モテキ&quot;オープニングダンサー</li>
+            <li>2009年〜2011年・2012年〜2013年&nbsp;東京ディズニーリゾートダンサー</li>
+            <li>2008年・2011年&nbsp;ミュージカル&quot;アニー&quot;タップダンス振付助手</li>
+          </ul><br>
+          	<h3>Balletone(バレトン)</h3>
+					<p>フィットネス(筋トレ)・バレエ・ヨガを組み合わせたエクササイズです。音楽に合わせてほぼノンストップで動いて行きます。がっつり激しい運動動きではないですがじんわり体幹をを作るのに効くエクササイズです。裸足で行うことによって足裏の感覚を目覚めさせ、身体の筋力を左右対称に鍛えることができます。体幹を鍛えバランス感覚を養いたい方、激しい運動は苦手だけど汗をかきたいかた、細くしなやかな筋肉をつけたい方などにオススメです!!!クラス時間も30〜60分、レベルも初心者〜上級者の方と合わせられるので様々な方に参加していただけます。</p>
+                    <li>Fighting Fitness<br>パンチ、キックなど格闘技の動きを全身を使って行います。肩凝り、メタボ、ストレス解消などに効果があり</li>
+                    <li>美・姿勢ストレッチ＆トレーニング<br>「伸ばす、鍛える、動かす」それぞれ三つの専門知識を取り入れたメソッド。
+姿勢が変われば意識が変わる、意識が変われば景色が変わる</li>
+					<li>シェイプボクシング<br>シャドーボクシング、ボクササイズ初級</li>
+                    <li>ボクサーダイエットプログラム<br>シャドーボクシング、ボクササイズ中級</li>
+                    <li>貯筋の時間<br>自分の体重を使った誰でもできる筋トレ。
+安全で確実な筋力アップができるトレーニングメソッドで、ダイエットにも最適です。
+肩こり、腰痛、生活習慣病予防にも</li>
+					<li>ヨガ<br>深い腹式呼吸で肺、横隔膜を動かして全身の血流を良くし、自律神経の活動を整えたり柔軟性アップ、ストレス解消、心と体を整えます</li><br>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="trainer-info" class="trainer-info">
+    <div class="container">
+      <div class="row">
+        <div class="trainer-meta col-md-4 col-md-push-8">
+          <h3>受講料</h3>
+          <p>&yen;10,000<br>
+          <small class="text-muted">60分&nbsp;10000円～</small></p>
+          <hr>
+          <h3>受講内容</h3>
+          <p>Balletone(バレトン)<br>
+          <small class="text-muted">※インストラクターの都合により時間、曜日が限定されてしまうプログラムもございます。</small></p>
+		<h3>受講時間</h3>
+        <p>月曜日・火曜日〜16時・金曜日・土曜日17時〜</p>
+        </div>
+        <hr class="visible-xs">
+        <div id="steps" class="col-md-8 col-md-pull-4">
+          <h3>体験レッスン受講まで、簡単3ステップ！</h3>
+          <p>通常と同じ内容の60分の体験授業をレッスン料無料でご用意しています。(貸し音楽スタジオの使用料(1,000円〜2,500円)を別途ご負担ください。)</p>
+          <div class="row">
+            <div class="col-sm-4">
+              <h4>Step 1</h4>
+              <img src="assets/img/step1.jpg" class="img-responsive img-rounded">
+              <p>3分でカンタンお申し込み</p>
+            </div>
+            <div class="col-sm-4">
+              <h4>Step 2</h4>
+              <img src="assets/img/step2.jpg" class="img-responsive img-rounded">
+              <p>レッスンを受ける</p>
+            </div>
+            <div class="col-sm-4">
+              <h4>Step 3</h4>
+              <img src="assets/img/step3.jpg" class="img-responsive img-rounded">
+              <p>その場でお支払い</p>
+            </div>
+            <div class="col-sm-12 text-center">
+              <p><a href="#" class="btn btn-primary btn-lg">無料体験</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <footer>
+    <div class="container">
+      &copy; 2013 Saturdays Inc. All rights reserved.
+    </div>
+  </footer>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/2.1.0/jquery.imagesloaded.min.js"></script>
+  <script src='assets/js/bootstrap.js'></script>
+<script src='assets/js/jquery.backstretch.min.js'></script>
+<script src='assets/js/jquery-imagefill.js'></script>
+<script src='assets/js/jquery.collagePlus.js'></script>
+<script src='assets/js/app.js'></script>
+
+</body>
+
+</html>

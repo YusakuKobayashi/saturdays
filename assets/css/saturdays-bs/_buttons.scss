@@ -1,0 +1,19 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+.btn {
+  border-radius: 21px;
+}
+
+.btn-lg {
+  border-radius: 27px;
+}
+
+.btn-primary {
+  @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}

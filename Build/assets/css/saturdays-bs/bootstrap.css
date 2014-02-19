@@ -1,0 +1,40 @@
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 16px;
+  margin-bottom: 32px; }
+
+p {
+  margin: 0 0 32px; }
+
+.btn {
+  border-radius: 21px; }
+
+.btn-lg {
+  border-radius: 27px; }
+
+.btn-primary {
+  color: #00c1e9;
+  background-color: #fff200;
+  border-color: #e6da00; }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+    color: #00c1e9;
+    background-color: #d6cb00;
+    border-color: #a8a000; }
+  .open .btn-primary.dropdown-toggle {
+    color: #00c1e9;
+    background-color: #d6cb00;
+    border-color: #a8a000; }
+  .btn-primary:active, .btn-primary.active {
+    background-image: none; }
+  .open .btn-primary.dropdown-toggle {
+    background-image: none; }
+  .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
+    background-color: #fff200;
+    border-color: #e6da00; }
+  .btn-primary .badge {
+    color: #fff200;
+    background-color: #00c1e9; }

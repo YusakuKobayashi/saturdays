@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='assets/css/app.css'>
+  
+  <title>Saturdays</title>
+  
+</head>
+
+<body>
+  
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1380496228847098";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="masthead" data-background="assets/img/yoga_img/shimada_m_wallpaper_biz.jpg" class="masthead category dim">
+    <h1>Saturdays</h1>
+    <div id="headline" class="container">
+      <h2>ヨガ</h2>
+      <p>従業員がみんなで運動することにより、コミュニケーションが活性化されます。<br>またSaturdaysでは、本格的ヨガインストラクターのプログラムにより<br>レッスンがより盛り上がる仕掛けを入れております。</p>
+    </div>
+    <a href="#" class="btn btn-primary">法人様</a>
+    <div id="social">
+      <div class="fb-like" data-href="http://saturdays.jp" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+    </div>
+  </div>
+
+  <section id="trainers" class="listing">
+    <div class="container">
+      <div class="row">
+        <!--TrainerName-->
+        <div class="col-md-4 col-sm-6">
+          <div class="item">
+            <div class="item-image dim" data-background="assets/img/yoga_img/yokomachi_n_wallpaper_biz.jpg">
+              <h3>横町七瀬</h3>
+            </div>
+            <div class="item-info">
+              <p>dsvsdv</p>
+            </div>
+          </div>
+        </div>
+        <!--TrainerName-->
+        <div class="col-md-4 col-sm-6">
+          <div class="item">
+            <div class="item-image dim" data-background="assets/img/yoga_img/seo_m_wallpaper_biz.jpg">
+              <h3>瀬尾美紀</h3>
+            </div>
+            <div class="item-info">
+              <p>dsvsdv</p>
+            </div>
+          </div>
+        </div>
+        <!--TrainerName-->
+        <div class="col-md-4 col-sm-6">
+          <div class="item">
+            <div class="item-image dim" data-background="assets/img/yoga_img/shimada_m_wallpaper_biz.jpg">
+              <h3>島田麻衣</h3>
+            </div>
+            <div class="item-info">
+              <p>dsvsdv</p>
+            </div>
+          </div>
+        </div>
+        <!--TrainerName-->
+        <div class="col-md-4 col-sm-6">
+          <div class="item">
+            <div class="item-image dim" data-background="assets/img/yoga_img/arai_k_wallpaper_biz.jpg">
+              <h3>新井くるみ</h3>
+            </div>
+            <div class="item-info">
+              <p>dsvsdv</p>
+            </div>
+          </div>
+        </div>
+        <!--TrainerName-->
+        <div class="col-md-4 col-sm-6">
+          <div class="item">
+            <div class="item-image dim" data-background="assets/img/yoga_img/shimizu_m_wallpaper_biz.jpg">
+              <h3>清水麻貴</h3>
+            </div>
+            <div class="item-info">
+              <p>dsvsdv</p>
+            </div>
+          </div>
+        </div>
+        <!--TrainerName-->
+        <div class="col-md-4 col-sm-6">
+          <div class="item">
+            <div class="item-image dim" data-background="assets/img/yoga_img/satou_o_wallpaper_biz.jpg">
+              <h3>佐藤おりえ</h3>
+            </div>
+            <div class="item-info">
+              <p>dsvsdv</p>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      &copy; 2013 Saturdays Inc. All rights reserved.
+    </div>
+  </footer>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/2.1.0/jquery.imagesloaded.min.js"></script>
+  <script src='assets/js/bootstrap.js'></script>
+<script src='assets/js/jquery.backstretch.min.js'></script>
+<script src='assets/js/jquery-imagefill.js'></script>
+<script src='assets/js/jquery.collagePlus.js'></script>
+<script src='assets/js/app.js'></script>
+
+</body>
+
+</html>

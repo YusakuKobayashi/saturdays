@@ -1,0 +1,410 @@
+@import "saturdays-bs/variables";
+
+// Core Bootstrap
+@import "bootstrap/bootstrap";
+
+// Customizations BEGIN
+@import "saturdays-bs/bootstrap";
+// Customizations END
+
+//
+// App styles
+// --------------------------------------------------
+
+// Masthead
+// --------------------------------------------------
+
+.masthead {
+  height: 528px;
+  position: relative;
+  z-index: $zindex-popover;
+  &.home {
+    height: 416px;
+    #headline {
+      top: 144px;
+      h2 {
+        font-size: 64px;
+        line-height: 80px;
+      }
+    }
+  }
+  &.trainer {
+    height: 112px;
+    h1 {
+      background-size: 128px 60px;
+      height: 60px;
+      left: 32px;
+      top: 8px;
+      width: 128px;
+    }
+  }
+  h1 {
+    background: url('saturdays_logo.png') no-repeat;
+    background-size: 170px 80px;
+    height: 80px;
+    @include hide-text();
+    left: 32px;
+    position: absolute;
+    top: 16px;
+    width: 170px;
+  }
+  #headline {
+    padding: 0 16px;
+    position: absolute;
+    text-align: center;
+    top: 152px;
+    width: 100%;
+    h2 {
+      color: white;
+      font-size: 96px;
+      font-weight: bold;
+      line-height: 112px;
+    }
+    p {
+      color: white;
+      line-height: 28px;
+      padding: 0 16px;
+    }
+    > .btn {
+      margin-top: 48px;
+    }
+  }
+  
+  > .btn {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+  #social {
+    bottom: 0;
+    float: left;
+    left: 50%;
+    margin: 0 0 24px -60px;
+    position: absolute;
+  }
+}
+
+.dim .backstretch:before {
+  background-color: #000;
+  content: '';
+  height: 100%;
+  left: 0;
+  opacity: 0.24;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#partners {
+  background: $brand-primary;
+  color: white;
+  height: 192px;
+  padding: 48px 0; 
+  #partner-logos {
+    background: url('partners.png') no-repeat;
+    background-size: 613px 42px;
+    height: 42px;
+    margin: 0 auto 32px;
+    width: 613px;
+    & + p {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: $screen-xs-max) {
+  .masthead {
+    height: 368px;
+    &.home {
+      height: 480px;
+    }
+    &.category {
+      #headline {
+        top: 96px;
+      }
+    }
+    h1 {
+      left: 16px;
+      top: 0;
+    }
+    #headline {
+      top: 128px;
+      h2 {
+        font-size: 48px;
+        line-height: 48px;
+      }
+      > .btn {
+        margin-top: 8px;
+      }
+    }
+    #social {
+      margin-bottom: 12px;
+    }
+  }
+  #partners {
+    padding: 32px;
+    height: 176px;
+    #partner-logos {
+      background: url('partners_xs.png') no-repeat;
+      background-size: 297px 70px;
+      height: 70px;
+       margin: 0 auto 16px;
+      width: 297px;
+    }
+  }
+}
+
+
+// Activity selector
+// --------------------------------------------------
+
+#home-activities {
+  .home-activity {
+    font-size: $font-size-h3;
+    height: 192px;
+    padding: 0;
+    position: relative;
+    a {
+      color: white;
+      display: block;
+      font-weight: bold;
+      line-height: 192px;
+      position: absolute;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      z-index: $zindex-navbar;
+    }
+  }
+}
+
+
+// Team
+// --------------------------------------------------
+
+#intro {
+  background-color: #f5f5f5;
+}
+
+
+// Features
+// --------------------------------------------------
+
+.feature {
+  color: $brand-primary;
+  padding-bottom: 48px;
+  padding-top: 48px;
+  h2 {
+    margin-bottom: 48px;
+  }
+}
+
+.btn + .feature {
+  padding-top: 80px;
+}
+
+.feature + .btn {
+  left: 50%;
+  margin: -27px 0 0 -96px;
+  position: absolute;
+  width: 192px;
+  z-index: 100;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0 0 0 48px;
+  li {
+    margin-bottom: 32px;
+    .feature-check {
+      background: url('feature_check.png') no-repeat;
+      background-size: 32px 32px;
+      float: left;
+      height: 32px;
+      margin: 0 0 0 -48px;
+      width: 32px;
+    }
+  }
+}
+
+
+// Benefits
+// --------------------------------------------------
+
+.benefit {
+  background-color: $brand-primary;
+  overflow: visible;
+  padding: 48px 0 80px;
+  position: relative;
+  text-align: center;
+  .container {
+    max-width: 720px;
+  }
+  .benefit-icon {
+    background: url('benefit_icon_sprite.png');
+    background-size: 320px 320px;
+    height: 160px;
+    margin: 0 auto;
+    width: 160px;
+  }
+  h2 {
+    color: white;
+    margin-bottom: 32px;
+  }
+  p {
+    color: white;
+  }
+  .backstretch:before {
+    background-color: #000;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0.24;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  + .btn {
+    left: 50%;
+    margin: -27px 0 0 -96px;
+    position: absolute;
+    width: 192px;
+    z-index: 100;
+  }
+}
+
+.benefit + .benefit {
+  padding: 80px 0;
+}
+
+#benefit-communication .benefit-icon {
+  background-position: 0 0;
+}
+
+#benefit-health .benefit-icon {
+  background-position: 160px 0;
+}
+
+#benefit-solidarity .benefit-icon {
+  background-position: 0 160px;
+}
+
+#benefit-quality .benefit-icon {
+  background-position: 160px 160px;
+}
+
+
+// Trainers
+// --------------------------------------------------
+
+#sample-trainers {
+  background-color: #f5f5f5;
+  h3 {
+    font-size: $font-size-base;
+    font-weight: normal;
+  }
+}
+
+
+// FAQs
+// --------------------------------------------------
+
+.faq {
+  padding: 0 40px 0 64px;
+  h3 {
+    margin: 0 0 12px;
+  }
+  .aq {
+    display: block;
+    float: left;
+    font-size: $font-size-h3;
+    font-weight: $headings-font-weight;
+    margin: 0 0 0 -40px;
+    width: 40px;
+  }
+}
+
+
+// Listings
+// --------------------------------------------------
+
+.listing {
+  background-color: #f5f5f5;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  .item {
+    background-color: white;
+    border: 1px solid $gray-lighter;
+    border-radius: $border-radius-base;
+    margin-bottom: 32px;
+    .item-image {
+      @include border-top-radius($border-radius-base);
+      height: 160px;
+      position: relative;
+      img, .backstretch {
+        @include border-top-radius($border-radius-base);
+      }
+      h3 {
+        bottom: 16px;
+        color: white;
+        font-size: $font-size-base;
+        left: 16px;
+        margin: 0;
+        position: absolute;
+      }
+    }
+    .item-info {
+      padding: 12px 16px;
+    }
+  }
+}
+
+
+// Trainer
+// --------------------------------------------------
+
+.trainer-info {
+  .container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  & + hr {
+    margin: 0;
+  }
+}
+
+#trainer-image {
+  img {
+    margin-bottom: 16px;
+  }
+}
+
+.trainer-meta {
+  h3 {
+    font-size: $font-size-base;
+  }
+  p {
+    font-size: $font-size-large;
+    margin: 0;
+  }
+  small {
+    font-size: $font-size-small;
+  }
+}
+
+#steps {
+  h4 {
+    font-size: $font-size-base;
+    margin-bottom: 16px;
+  }
+}
+
+
+// Footer
+// --------------------------------------------------
+
+body > footer {
+  background: $gray-lighter;
+  padding: 48px 0;
+  text-align: center;
+}

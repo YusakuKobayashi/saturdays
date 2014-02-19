@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='../assets/css/app.css'>
+  
+  <title>Saturdays</title>
+  
+</head>
+
+<body>
+  
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1380496228847098";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="masthead" data-background="assets/img/wallpaper.png" class="masthead trainer">
+    <h1>Saturdays</h1>
+    <a href="#" class="btn btn-primary">法人様</a>
+  </div>
+
+  <section id="trainer-profile" class="trainer-info">
+    <div class="container">
+      <h1>CRAZY884（本名：林徹）</h1>
+      <div class="row">
+        <div id="trainer-image" class="col-md-4">
+          <img class="img-responsive img-rounded" src="assets/img/trainer_m.jpg" alt="Trainer name">
+        </div>
+        <div class="col-md-8">
+          <p>1981年1月14日生まれ東京都出身, 元プロキックボクサー </p>
+          <ul>
+            <li>ＲＩＳＥ DoAトーナメント03、04、07三位、 </li>
+            <li>元Jネットワークミドル級一位、WPMFミドル級八位。 </li>
+            <li>2003年4月、ＲＩＳＥ２ndにてプロデビュー。 </li>
+            <li>2011年8月、ミャンマーの国技で究極の格闘技と言われる「ラウェイ」の 国際対抗戦に日本代表として出場。 </li>
+            <li>フルラウンドを戦い抜き双方勝者となる。 </li>
+            <li>2012年12月、現役を引退。現在はフリーのパーソナルトレーナーとして主にバンゲリングベイ恵比寿、トータルワークアウトなど都内を中心に活動中。</li>
+          </ul>
+          ダイエットや身体作りからストレス、運動不足解消、アマチュアからプロ まで選手の育成、サポートを行なう。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="trainer-info" class="trainer-info">
+    <div class="container">
+      <div class="row">
+        <div class="trainer-meta col-md-4 col-md-push-8">
+          <h3>受講料</h3>
+          <p>&yen;4,800<br>
+          <small class="text-muted">Additional information here</small></p>
+          <hr>
+          <h3>Other info</h3>
+          <p>Data, data, data<br>
+          <small class="text-muted">Additional information here</small></p>
+        </div>
+        <hr class="visible-xs">
+        <div id="steps" class="col-md-8 col-md-pull-4">
+          <h3>体験レッスン受講まで、簡単3ステップ！</h3>
+          <p>通常と同じ内容の60分の体験授業をレッスン料無料でご用意しています。(貸し音楽スタジオの使用料(1,000円〜2,500円)を別途ご負担ください。)</p>
+          <div class="row">
+            <div class="col-sm-4">
+              <h4>Step 1</h4>
+              <img src="assets/img/step1.jpg" class="img-responsive img-rounded">
+              <p>3分でカンタンお申し込み</p>
+            </div>
+            <div class="col-sm-4">
+              <h4>Step 2</h4>
+              <img src="assets/img/step2.jpg" class="img-responsive img-rounded">
+              <p>レッスンを受ける</p>
+            </div>
+            <div class="col-sm-4">
+              <h4>Step 3</h4>
+              <img src="assets/img/step3.jpg" class="img-responsive img-rounded">
+              <p>その場でお支払い</p>
+            </div>
+            <div class="col-sm-12 text-center">
+              <p><a href="#" class="btn btn-primary btn-lg">無料体験</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="trainer-gallery" class="trainer-info">
+    <div class="collage">
+      <iframe height="480" width="360" frameborder="0" src="http://www.magisto.com/embed/IlBCZ1IZQTcvUxphCzE"></iframe><img src="assets/img/trainers/8004_568558399904510_627363291_n.jpg" width="960" height="638"><iframe width="420" height="315" src="//www.youtube.com/embed/-KB01hhZoxM" frameborder="0" allowfullscreen></iframe><img src="assets/img/trainers/1560594_568558229904527_1701107519_n.jpg" width="960" height="640"><img src="assets/img/trainers/1526849_568557756571241_1604343095_n.jpg" width="960" height="638"><img src="assets/img/trainers/1525449_568558519904498_214457597_n.jpg" width="960" height="640"><img src="assets/img/trainers/8004_568558399904510_627363291_n.jpg" width="960" height="638"><img src="assets/img/trainers/1525422_568559069904443_1749644171_n.jpg" width="960" height="960"><img src="assets/img/trainers/1551536_568559346571082_1154681692_n.jpg" width="500" height="739"><img src="assets/img/trainers/1559679_568559723237711_2052461729_n.jpg" width="780" height="469">
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      &copy; 2013 Saturdays Inc. All rights reserved.
+    </div>
+  </footer>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/2.1.0/jquery.imagesloaded.min.js"></script>
+  <script src='assets/js/bootstrap.js'></script>
+<script src='assets/js/jquery.backstretch.min.js'></script>
+<script src='assets/js/jquery-imagefill.js'></script>
+<script src='assets/js/jquery.collagePlus.js'></script>
+<script src='assets/js/app.js'></script>
+
+</body>
+
+</html>

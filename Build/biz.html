@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='assets/css/app.css'>
+  
+  <title>Saturdays</title>
+  
+</head>
+
+<body>
+  
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1380496228847098";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <div id="masthead" data-background="assets/img/wallpaper_biz2.jpg" class="masthead dim">
+    <h1>Saturdays</h1>
+    <div id="headline" class="container">
+      <h2>出張レッスン</h2>
+      <a href="#" class="btn btn-primary btn-lg">習い事一覧</a>
+    </div>
+    <a href="#" class="btn btn-primary">法人様</a>
+    <div id="social">
+      <div class="fb-like" data-href="http://saturdays.jp" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
+    </div>
+  </div>
+  
+  <div id="partners">
+    <div class="container">
+      <div id="partner-logos"></div>
+      <p>導入クライアント様一例</p>
+    </div>
+  </div>
+
+  <section id="benefit-communication">
+    <div class="benefit" data-background="assets/img/benefit_communication.jpg">
+      <div class="container">
+        <div class="benefit-icon"></div>
+        <h2>従業員間のコミュニケーション増幅</h2>
+        <p>従業員がみんなで運動することにより、コミュニケーションが活性化されます。<br>
+        またSaturdaysでは、ボクササイズにインストラクターと従業員の中の希望者によるスパーリングを加えるなど、レッスンがより盛り上がる仕掛けを入れております。</p>
+      </div>
+    </div>
+    <a href="#" class="btn btn-primary btn-lg">習い事一覧</a>
+    <div id="benefit-health" class="benefit">
+      <div class="container">
+        <div class="benefit-icon"></div>
+        <h2>従業員の健康維持・向上</h2>
+        <p>Saturdaysで継続的な運動をする事が、従業員の健康の維持・向上に役立ちます。<br>
+        	Saturdaysは飽きずに楽しく続けられる事を重視しておりますので、<br>
+            ”やらされている感”では無く、楽しい時間を通して健康の維持・改善が見込めます。</p>
+      </div>
+    </div>
+    <div id="benefit-solidarity" class="benefit" data-background="assets/img/benefit_solidarity.jpg">
+      <div class="container">
+        <div class="benefit-icon"></div>
+        <h2>従業員間の連帯感のアップ</h2>
+        <p>運動プログラムには爽快感や達成感の他に、<br>
+        グループで行う事で他者との連帯感も得られます。社内雰囲気の改善に役立ちます。</p>
+      </div>
+    </div>
+    <a href="#" class="btn btn-primary btn-lg">習い事一覧</a>
+    <div id="benefit-quality" class="benefit">
+      <div class="container">
+        <div class="benefit-icon"></div>
+        <h2>従業員の日々の仕事・生活の質の向上</h2>
+        <p>例えば始業前にSaturdaysのレッスンをすることで、<br>
+        脳の働きが活発になり集中力があがります。<br>
+        終業後なら仕事で疲れた体をリラックスさせ、さらに運動により血行不良等のによる肉体疲労の軽減、睡眠の質もアップします。</p>
+      </div>
+    </div>
+  </section>
+  
+  <section id="sample-trainers" class="feature">
+    <div class="container">
+      <div class="row">
+        <div class="text-center col-xs-12">
+          <h2>Saturdaysプログラム一部</h2>
+          <p>Saturdaysの経験豊富なトレーナーによる<br>
+          楽しく効果的なレッスンをいつでもどこへでもお届けします</p>
+        </div>
+        <div class="text-center sample-trainer col-sm-4">
+          <img src="assets/img/trainer1.jpg" height="192" width="192">
+          <h3>林 徹</h3>
+        </div>
+        <div class="text-center sample-trainer col-sm-4">
+          <img src="assets/img/trainer2.jpg" height="192" width="192">
+          <h3>島田 麻衣</h3>
+        </div>
+        <div class="text-center sample-trainer col-sm-4">
+          <img src="assets/img/trainer3.jpg" height="192" width="192">
+          <h3>前田 紅華</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="#" class="btn btn-primary btn-lg">習い事一覧</a>
+
+  <section id="faqs" class="feature">
+    <div class="container">
+      <div class="row">
+        <div class="text-center col-xs-12">
+          <h2>Saturdaysにできること</h2>
+          <p>Saturdaysの経験豊富なトレーナーによる、楽しく効果的なレッスンをいつでもどこへでもお届けします。</p>
+        </div>
+        <div class="faq col-sm-6">
+          <h3><span class="aq">Q:</span>どんなプログラムがある?</h3>
+          <p><span class="aq">A:</span>私はファイティングエクササイズを始め、 ヨガ、タップダンス等多様なプログラム をご用意します。<br>また、ご要望・目的に応じたプログラムの作成、日ごとに異なるエクササイズの実施等もご相談いただけます。</p>
+        </div>
+        <div class="faq col-sm-6">
+          <h3><span class="aq">Q:</span>どんなプログラムがある?</h3>
+          <p><span class="aq">A:</span>私はファイティングエクササイズを始め、 ヨガ、タップダンス等多様なプログラム をご用意します。<br>また、ご要望・目的に応じたプログラムの作成、日ごとに異なるエクササイズの実施等もご相談いただけます。</p>
+        </div>
+        <div class="faq col-sm-6">
+          <h3><span class="aq">Q:</span>どんなプログラムがある?</h3>
+          <p><span class="aq">A:</span>私はファイティングエクササイズを始め、 ヨガ、タップダンス等多様なプログラム をご用意します。<br>また、ご要望・目的に応じたプログラムの作成、日ごとに異なるエクササイズの実施等もご相談いただけます。</p>
+        </div>
+        <div class="faq col-sm-6">
+          <h3><span class="aq">Q:</span>どんなプログラムがある?</h3>
+          <p><span class="aq">A:</span>私はファイティングエクササイズを始め、 ヨガ、タップダンス等多様なプログラム をご用意します。<br>また、ご要望・目的に応じたプログラムの作成、日ごとに異なるエクササイズの実施等もご相談いただけます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="container">
+      &copy; 2013 Saturdays Inc. All rights reserved.
+    </div>
+  </footer>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/2.1.0/jquery.imagesloaded.min.js"></script>
+  <script src='assets/js/bootstrap.js'></script>
+<script src='assets/js/jquery.backstretch.min.js'></script>
+<script src='assets/js/jquery-imagefill.js'></script>
+<script src='assets/js/jquery.collagePlus.js'></script>
+<script src='assets/js/app.js'></script>
+
+</body>
+
+</html>
